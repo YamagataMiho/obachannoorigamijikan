@@ -7,23 +7,18 @@
     vertical-align: bottom;
 }
 
-
-
-body{
-    background-image: url(./images/背景和紙.jpg);
-}
-
 section{
-    padding-top: 180px;
+    padding-top: 10vh;
     width: 80%;
-    margin: 0 auto;
 }
 
-header{
+header,main,section,footer{
     width: 100%;
     height:100vh;
-    background-image: url(./images/背景和紙.jpg);
-    position: relative;
+    /* background-image: url(./images/背景和紙.jpg); */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+
 }
 .mainvisual .image_box{
     width: 450px;
@@ -134,41 +129,23 @@ h2:after {
     font-family: 'Yomogi', cursive;
     font-size: 48px;
 }
-.content{
-    display: flex;
-    justify-content: center;
-}
-.image_box{
-    width: 250px;
-    height: 193px;
-}
-.image_box:nth-child(2){
-    margin: 0 5px;
-}
-#work .image_box img{
-    width: 100%;
-    background-size: cover;
-    filter:saturate(0);
-    transition:filter 0.3s;
-}
-#work .image_box:hover img{
-    filter:saturate(100%);
-} 
+
 
 /*  */
+/* スライド 横並びのうちひとつだけ大きく表示 --> */
 /*==================================================
 スライダーのためのcss
 ===================================*/
-#work .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:94%;
     margin:20vh auto;
-
 }
 
-#work .slider img {
-    width:40vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+.slider li img {
+    width:30vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
     height:50vh;
     object-fit: cover;
+    margin: 10vh 0;
 }
 
 .slider .slick-slide {
@@ -182,7 +159,6 @@ h2:after {
   opacity: 1;/*透過なし*/
 }
 
-
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
@@ -192,10 +168,10 @@ h2:after {
     top: 42%;
     cursor: pointer;/*マウスカーソルを指マークに*/
     outline: none;/*クリックをしたら出てくる枠線を消す*/
-    border-top: 2px solid #666;/*矢印の色*/
-    border-right: 2px solid #666;/*矢印の色*/
-    height: 15px;
-    width: 15px;
+    border-top: 5px solid #ec8282;
+    border-right: 5px solid #ec8282;
+    height: 50px;
+    width: 50px;
 }
 
 .slick-prev {/*戻る矢印の位置と形状*/
@@ -223,143 +199,18 @@ h2:after {
 .slick-dots button {
     color: transparent;
     outline: none;
-    width:8px;/*ドットボタンのサイズ*/
-    height:8px;/*ドットボタンのサイズ*/
+    width:10px;/*ドットボタンのサイズ*/
+    height:10px;/*ドットボタンのサイズ*/
     display:block;
     border-radius:50%;
     background:#ccc;/*ドットボタンの色*/
 }
 
 .slick-dots .slick-active button{
-    background:#333;/*ドットボタンの現在地表示の色*/
+    background:#333;/* ドットボタンの現在地表示の色 */
 }
 
-/*画像の横幅を100%にしてレスポンシブ化*/
-img{
-    width: 100%;
-    height: auto;
-    vertical-align: bottom;/*画像の下にできる余白を削除*/
-  }
-  
-  /*メイン画像下に余白をつける*/
-  
-  .gallery{
-    margin:0 0 5px 0;
-  }
-  
-  /*矢印の設定*/
-  
-  /*戻る、次へ矢印の位置*/
-  .slick-prev, 
-  .slick-next {
-      position: absolute;/*絶対配置にする*/
-    z-index: 3;
-      top: 42%;
-      cursor: pointer;/*マウスカーソルを指マークに*/
-      outline: none;/*クリックをしたら出てくる枠線を消す*/
-      border-top: 2px solid #ccc;/*矢印の色*/
-      border-right: 2px solid #ccc;/*矢印の色*/
-      height: 25px;
-      width: 25px;
-  }
-  
-  .slick-prev {/*戻る矢印の位置と形状*/
-      left:2.5%;
-      transform: rotate(-135deg);
-  }
-  
-  .slick-next {/*次へ矢印の位置と形状*/
-      right:2.5%;
-      transform: rotate(45deg);
-  }
-  
-  /*選択するサムネイル画像の設定*/
-  
-  .choice-btn li{
-    cursor: pointer;
-    outline: none;
-    background:#333;
-    width:25%!important;
-  }
-  
-  .choice-btn li img{
-    opacity: 0.4;/*選択されていないものは透過40%*/
-  }
-  
-  .choice-btn li.slick-current img{
-    opacity: 1;/*選択されているものは透過しない*/
-  }
-  
-  .choice-btn .slick-track {
-    transform: unset !important;/*画面幅サイズ変更に伴うサムネイル固定*/
-  }
-  
-  /*========= レイアウトのためのCSS ===============*/
-  
-  /*エリア全体を中央寄せ*/
-  .wrapper{
-    width:94%;
-    max-width:900px;
-    margin:0 auto;
-  }
-  
-  ul{
-    margin:0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  a{
-    color: #333;
-  }
-  
-  a:hover,
-  a:active{
-    text-decoration: none;
-  }
-  
-  h1{
-    text-align: center;
-    font-size:6vw;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin:30px 0;
-  }
-  
-  p{
-    margin:30px 0;
-    word-wrap : break-word;
-  }
-  
-/*========= レイアウトのためのCSS ===============*/
-
-body{
-  background:#eee;
-}
-
-h2,p {
-    text-align:center;
-    padding:20px;
-}
-
-ul{
-  margin:0;
-  padding: 0;
-  list-style: none;
-}
-
-a{
-  color: #333;
-}
-
-a:hover,
-a:active{
-  text-decoration: none;
-}
-/*  */
-
-
-
+/* スライド 横並びのうちひとつだけ大きく表示 --> */
 
 
 
@@ -395,10 +246,10 @@ a:active{
 .submit_button{
     text-align: center;
 }
-input,
-textarea{
+.contact input,
+.contact textarea{
     font-size: 24px;
-    border: 1px solid antiquewhite;
+    border: 1px solid brown;
 }
 .submit{
     background-color:antiquewhite;
@@ -417,10 +268,78 @@ textarea{
 }
 
 footer{
-    background-color: rgb(246, 242, 238);
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* topに戻る */
+#page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#942D2F;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:1.2rem;
+    transition:all 0.3s;
+  }
+  
+  #page-top a:hover{
+    background: rgb(166, 166, 113);
+    color: #000;
+  }
+  
+  #page-top {
+    position: fixed;
+    right: 10px;
+    bottom:10px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  
+  
+  #page-top.LeftMove{
+    animation: LeftAnime 0.5s forwards;
+  }
+  
+  @keyframes LeftAnime{
+    from {
+      opacity: 0;
+    transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateX(0px);
+    }
+  }
+  
+  
+  #page-top.RightMove{
+    animation: RightAnime 0.5s forwards;
+  }
+  @keyframes RightAnime{
+    from {
+      opacity: 1;
+    transform: translateX(0);
+    }
+    to {
+      opacity: 1;
+    transform: translateX(200px);
+    }
+  }
+  /* topに戻る ----ここまで----*/
+
+  #footer{
+    position: relative;
+    z-index: 99;
+  }
+
