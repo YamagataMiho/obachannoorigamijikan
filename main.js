@@ -1,3 +1,13 @@
+// -----ハンバーガーメニュー-----
+ 
+$(function() {
+  $('.Toggle').click(function() {
+   $(this).toggleClass('active');
+  $('.menu').toggleClass('open');
+ });
+});
+
+// -----ハンバーガーメニュー-----ここまで------
 
 
 // 
@@ -49,6 +59,10 @@ $('#page-top').click(function () {
   }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
   return false;//リンク自体の無効化
 });
+
+
+
+
 
 
 
